@@ -1,0 +1,117 @@
+<!-- ======= Property Search Section ======= -->
+<div class="click-closed"></div>
+<!--/ Form Search Star /-->
+<div class="box-collapse">
+  <div class="title-box-d">
+    <h3 class="title-d">Search Property</h3>
+  </div>
+  <span class="close-box-collapse right-boxed bi bi-x"></span>
+  <div class="box-collapse-wrap form">
+    <form class="form-a" action="{% url 'search' %}" method="GET" >
+        {% csrf_token %}
+      <div class="row">
+        <div class="col-md-12 mb-2">
+          <div class="form-group">
+            <label class="pb-2" for="Type">Keyword</label>
+            <input
+              type="text" name='keywords'
+              class="form-control form-control-lg form-control-a"
+              placeholder="Keyword"
+            />
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="Type">Type</label>
+            <select name="property_types" class="form-control form-select form-control-a" id="Type">
+              <option value="None">Select Any</option>
+              <option value='Rent' >For Rent</option>
+              <option value='Sale'>For Sale</option>
+              <option value='House'>Open House</option>
+              <option value='Office'>For Office</option>
+              <option value='Hotel'>For Hotel</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="city">City</label>
+            <select name="property_citys" class="form-control form-select form-control-a" id="city">
+              <option value="None">Select Any</option>
+              <option value="Alabama">Alabama</option>
+              <option value="Arizona">Arizona</option>
+              <option value="California">California</option>
+              <option value="Colorado">Colorado</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="bedrooms">Bedrooms</label>
+            <select name="property_bedrooms"
+              class="form-control form-select form-control-a"
+              id="bedrooms"
+            >
+            <option value="None">Select Any</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="garages">Garages</label>
+            <select name="property_garages"
+              class="form-control form-select form-control-a"
+              id="garages"
+            >
+            <option value="None">Select Any</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="bathrooms">Bathrooms</label>
+            <select name="property_baths"
+              class="form-control form-select form-control-a"
+              id="bathrooms"
+            >
+            <option value="None">Select Any</option>
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6 mb-2">
+          <div class="form-group mt-3">
+            <label class="pb-2" for="price">Min Price</label>
+            <select name="property_prices" class="form-control form-select form-control-a" id="price">
+              <option value="None">Select Any</option>
+              <option value="50000">$50,000</option>
+              <option value="100000">$100,000</option>
+              <option value="150000">$150,000</option>
+              <option value="200000">$200,000</option>
+              <option value="500000">$500,000</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-b">Search Property</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- End Property Search Section -->>
